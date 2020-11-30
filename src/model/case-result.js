@@ -17,7 +17,7 @@ module.exports = function () {
         location: null,
         startTime: null,
         endTime: null,
-        duration: null,
+        duration: 0,
         status: null,
         steps: [],    // array of step-result.js
         logs: [],

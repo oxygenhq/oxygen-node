@@ -534,7 +534,8 @@ export default class OxygenRunner extends EventEmitter {
                     caseResult.status = Status.FAILED;
                 }
             } else {
-                return;
+                caseResult.failure = errorHelper.getFailureFromError(new Error('Worker not found or already exited'));
+                caseResult.status = Status.FAILED;
             }
         } catch (e) {
             log.error('_worker_Run() thrown an error:', e);
