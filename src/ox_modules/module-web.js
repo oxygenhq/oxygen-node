@@ -524,16 +524,16 @@ export default class WebModule extends WebDriverModule {
                                         for (const handle of handles) {
                                             await this.driver.switchToWindow(handle);
                                             const image = await this.driver.takeScreenshot();
-                                            const title = await this.driver.getTitle();
+                                            // const title = await this.driver.getTitle();
 
-                                            if (title) {
-                                                const textToImage = require('text-to-image');
-                                                let titleImage = await textToImage.generate(title, { debug: false, fontFamily: 'Arial' });
-                                                if (titleImage && typeof titleImage === 'string') {
-                                                    titleImage = titleImage.replace('data:image/png;base64,', '');
-                                                    images.push(titleImage);
-                                                }
-                                            }
+                                            // if (title) {
+                                            //     const textToImage = require('text-to-image');
+                                            //     let titleImage = await textToImage.generate(title, { debug: false, fontFamily: 'Arial' });
+                                            //     if (titleImage && typeof titleImage === 'string') {
+                                            //         titleImage = titleImage.replace('data:image/png;base64,', '');
+                                            //         images.push(titleImage);
+                                            //     }
+                                            // }
 
                                             images.push(image);
                                         }
