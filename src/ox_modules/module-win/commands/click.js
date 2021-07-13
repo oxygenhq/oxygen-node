@@ -16,6 +16,24 @@
 module.exports = async function(locator, timeout) {
     this.helpers.assertArgumentTimeout(timeout, 'timeout');
 
-    var el = await this.helpers.getElement(locator, false, timeout);
-    await el.click();
+    let el;
+    let err;
+    try {
+        await this.driver.waitUntil(async() => {
+            try {
+                el = await this.helpers.getElement(locator, false, timeout);
+                return true;
+            } catch (e) {
+                err = e;
+                return false;
+            }
+        },
+        { timeout: (timeout ? timeout : this.waitForTimeout) });
+    } catch (e) {
+        throw err;
+    }
+
+    if (el) {
+        await el.click();
+    }
 };
