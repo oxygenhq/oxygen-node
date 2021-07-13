@@ -44,6 +44,7 @@ export {default as isWebViewContext} from './isWebViewContext';
 export {default as launchApp} from './launchApp';
 export {default as longPressKeyCode} from './longPressKeyCode';
 export {default as open} from './open';
+export {default as waitForOpen} from './waitForOpen';
 export {default as pause} from './pause';
 export {default as removeApp} from './removeApp';
 export {default as resetApp} from './resetApp';
