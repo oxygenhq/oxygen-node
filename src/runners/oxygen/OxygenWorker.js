@@ -85,7 +85,7 @@ export default class OxygenWorker extends EventEmitter {
                     if (e && e.type && e.type === errorHelper.errorCode.ASSERT_PASSED) {
                         //ignore
                     } else {
-                        error = e;
+                        error = errorHelper.clearRequireStack(e);
                     }
                 }
             });
