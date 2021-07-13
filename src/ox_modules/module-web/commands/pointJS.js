@@ -11,6 +11,7 @@
  * @summary Points the mouse cursor over the specified element.
  * @description This method is similar to `web.point`, however it simulates the action using 
  *              JavaScript instead of using WebDriver's functionality which doesn't work in all cases.
+ *              Don't support IE < 9
  * @function pointJS
  * @param {String|Element} locator - An element locator.
  * @param {Number=} timeout - Timeout in milliseconds. Default is 60 seconds.

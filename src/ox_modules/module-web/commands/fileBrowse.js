@@ -9,6 +9,7 @@
 
 /**
  * @summary Uploads a local file
+ * @description Can crush driver
  * @function fileBrowse
  * @param {String|Element} locator - Locator for a `input type=file` element.
  * @param {String} filepath - Path to a local file.

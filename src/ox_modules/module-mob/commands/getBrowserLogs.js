@@ -10,6 +10,7 @@
 /**
  * @function getBrowserLogs
  * @summary Collects browser logs from the mobile device.
+ * @description Supports only for Android
  * @return {Object[]} A list of logs.
  * @for android, ios, hybrid, web
  * @example <caption>[javascript] Usage example</caption>

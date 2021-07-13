@@ -10,6 +10,7 @@
 /**
  * @function getBrowserLogs
  * @summary Collects logs from the browser console.
+ * @description Collect browser logs only for chrome
  * @return {Object[]} An array of browser console logs.
  * @for chrome
  * @example <caption>[javascript] Usage example</caption>

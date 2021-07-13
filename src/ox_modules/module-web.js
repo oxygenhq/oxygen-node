@@ -106,6 +106,10 @@ export default class WebModule extends WebDriverModule {
     /**
      * @function init
      * @summary Initializes new Selenium session.
+     * @description 
+     *  Record HAR only for chrome
+     *  Collect browser logs only for chrome
+     *  Don't run maximizeWindow and setTimeout commands for MicrosoftEdge
      * @param {String=} caps - Desired capabilities. If not specified capabilities will be taken from suite definition.
      * @param {String=} seleniumUrl - Remote server URL (default: http://localhost:4444/wd/hub).
      */

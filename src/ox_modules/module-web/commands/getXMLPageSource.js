@@ -9,6 +9,7 @@
 
 /**
  * @summary Gets the source of the currently active window which displays `text/xml` page.
+ * @description Support only chrome and ie
  * @function getXMLPageSource
  * @return {String} The XML page source.
  * @example <caption>[javascript] Usage example</caption>

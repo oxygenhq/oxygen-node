@@ -11,6 +11,7 @@
  * @summary Gets SMS text on Android phone.
  * @description `SMSPopup` application must be installed and running on the device to use this command.
  *              https://github.com/oxygenhq/android-smspopup/releases
+ *              Supports only for Android
  * @function smsGetText
  * @param {Number=} timeout - Time in milliseconds to wait for sms popup. Default is 60 seconds.
  * @return {String} - SMS text.
