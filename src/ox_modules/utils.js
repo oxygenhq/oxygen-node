@@ -250,7 +250,14 @@ module.exports = {
             this._prevImplicitTimeout = timeouts.implicit;
         }
         if (this.driver.setTimeout) {
-            await this.driver.setTimeout({ 'implicit': timeout });
+            if (
+                [providers.LAMBDATEST, providers.BROWSERSTACK, providers.PERFECTO].includes(this.driver.provider) &&
+                ['MicrosoftEdge', 'msedge', 'Edge', 'Internet Explorer'].includes(this.driver.capabilities.browserName)
+            ) {
+                // ignore
+            } else {
+                await this.driver.setTimeout({ 'implicit': timeout });
+            }
         }
     },
 
